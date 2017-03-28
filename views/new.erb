@@ -1,0 +1,66 @@
+<h1>Tamagotchi
+    <%=@@my_pet.name%>
+    is
+    <%if @@my_pet.is_alive%>
+    alive
+    <%else%>
+    dead
+    <%end%>
+    !</h1>
+
+<%if @@my_pet.is_alive%>
+<div class="col-sm-12">
+<li class="list-group-item">
+    <img class="center-block img-responsive" style="max-height:300px" src="https://media2.giphy.com/media/UrMQUIrD7waHu/200.webp#0
+"></li>
+</div>
+<%else%>
+<div class="container-fluid">
+<li class="list-group-item">
+    <img class="center-block img-responsive" style="max-height:300px" src="http://orig06.deviantart.net/982b/f/2014/074/f/4/dead_tamagotchi___gif_by_noah_tenshin-d7a9caj.gif
+    "></li>
+</div>
+<%end%>
+
+<div class="container-fluid">
+<p style="text-align: center">
+    <form action="upfood">
+        <button class="btn btn-info center-block">
+            Food Level
+            <%=@@my_pet.food_level%>
+            (Click to add food to
+            <%=@@my_pet.name%>
+            )
+        </button>
+    </form>
+</p>
+<p style="text-align: center">
+    <form action="upsleep">
+        <button class="btn btn-primary center-block">
+            Sleep Level
+            <%=@@my_pet.sleep_level%>
+            (Click to add sleep to
+            <%=@@my_pet.name%>
+            )
+        </button>
+    </form>
+</p>
+<p style="text-align: center">
+    <form action="upactivity">
+        <button class="btn btn-danger center-block">
+            Activity Level
+            <%=@@my_pet.activity_level%>
+            (Click to add activity to
+            <%=@@my_pet.name%>
+            )
+        </button>
+    </form>
+</P>
+<p style="text-align: center">
+    <form action="/">
+        <button class="btn btn-info center-block">
+            Get a new Tamagotchi
+        </button>
+    </form>
+</p>
+</div>
