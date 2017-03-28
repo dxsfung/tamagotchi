@@ -1,4 +1,4 @@
-<h1>Tamagotchi
+<h1 class="text-center">Tamagotchi
     <%=@@my_pet.name%>
     is
     <%if @@my_pet.is_alive%>
@@ -23,44 +23,41 @@
 <%end%>
 
 <div class="container-fluid">
-<p style="text-align: center">
+
     <form action="upfood">
         <button class="btn btn-info center-block">
             Food Level
             <%=@@my_pet.food_level%>
-            (Click to add food to
+            (Click to feed
             <%=@@my_pet.name%>
             )
         </button>
     </form>
-</p>
-<p style="text-align: center">
+
     <form action="upsleep">
         <button class="btn btn-primary center-block">
             Sleep Level
             <%=@@my_pet.sleep_level%>
-            (Click to add sleep to
+            (Click to make
             <%=@@my_pet.name%>
-            )
+            sleep)
         </button>
     </form>
-</p>
-<p style="text-align: center">
+
     <form action="upactivity">
         <button class="btn btn-danger center-block">
             Activity Level
             <%=@@my_pet.activity_level%>
-            (Click to add activity to
+            (Click to exercise
             <%=@@my_pet.name%>
             )
         </button>
     </form>
-</P>
-<p style="text-align: center">
+
     <form action="/">
         <button class="btn btn-info center-block">
             Get a new Tamagotchi
         </button>
     </form>
-</p>
+
 </div>
